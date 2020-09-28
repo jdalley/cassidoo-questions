@@ -17,19 +17,19 @@ class HowManyPizzas
     class People
     {
         public string Name { get; set; }
-        public int NumSlices { get; set; }
+        public int SlicesWanted { get; set; }
     }
 
-    static int GimmePizza(List<People> people, int pizzaSlices)
-        => (int)Math.Ceiling((decimal)people.Sum(p => p.NumSlices) / pizzaSlices);
+    static int GimmePizza(List<People> people, int slicesPerPizza)
+        => (int)Math.Ceiling((decimal)people.Sum(p => p.SlicesWanted) / slicesPerPizza);
 
     static void Main()
     {
         var peeps = new List<People>
         {
-            new People { Name = "Joe", NumSlices = 9 },
-            new People { Name = "Cami", NumSlices = 3 },
-            new People { Name = "Cassidy", NumSlices = 4 }
+            new People { Name = "Joe", SlicesWanted = 9 },
+            new People { Name = "Cami", SlicesWanted = 3 },
+            new People { Name = "Cassidy", SlicesWanted = 4 }
         };
 
         Console.WriteLine($"This'll doo: { GimmePizza(peeps, 8) }");
