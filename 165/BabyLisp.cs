@@ -34,7 +34,7 @@ class BabyLisp
         while (expResult.Contains('('))
         {
             // Find groups that match solvable parts of the expression, then replace the expression
-            // with the calculated answer. Solvable = an operand and two values.
+            // with the calculated answer.
             expResult = Regex.Replace(expResult, @"\(\s?(\w+\s+-?\d+\s+-?\d+\s?)\)", evaluator);
         }
 
@@ -43,7 +43,7 @@ class BabyLisp
 
     static string CalculateExpression(Match matchResult)
     {
-        // Toss parentheses then grab the operand and both values.
+        // Toss parentheses then grab the operator and both operands.
         var exp = matchResult.Value
             .Replace("(", string.Empty)
             .Replace(")", string.Empty)
