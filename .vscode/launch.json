@@ -10,11 +10,11 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/163/bin/Debug/netcoreapp3.1/163.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/163",
+            "program": "${workspaceFolder}/165/bin/Debug/netcoreapp3.1/165.dll",
+            "args": ["(subtract (multiply 4 2) (subtract 8 (add 2 (multiply 4 2))))"],
+            "cwd": "${workspaceFolder}/165",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
